@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'eElingo';
+  src: url('eElingo.eot');
+  src: url('eElingo.eot?#iefix') format('embedded-opentype'),
+       url('eElingo.svg#eElingo') format('svg'),
+       url('eElingo.ttf') format('truetype'),
+       url('eElingo.woff') format('woff'),
+       url('eElingo.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+

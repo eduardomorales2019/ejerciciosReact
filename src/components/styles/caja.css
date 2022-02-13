@@ -1,0 +1,46 @@
+.h1 {
+  color: indianred;
+  font-family: "eElingo";
+  letter-spacing: 5px;
+}
+.clase {
+  color: blueviolet;
+
+  /* background-color: blanchedalmond; */
+  display: inline-flex;
+}
+
+.product_container {
+  width: 100%;
+  height: 100%;
+}
+
+.product_container button {
+  background-color: aquamarine;
+  align-items: center;
+  margin: 0 auto;
+
+  width: 200px;
+  height: 200px;
+  font-family: "eElingo";
+  font-weight: 900;
+  color: mediumvioletred;
+  font-size: 1.8rem;
+  margin-left: 2px;
+  margin-top: 2px;
+  border-radius: 14px;
+  text-transform: capitalize;
+}
+
+.product_container button:hover {
+  background-color: darkcyan;
+}
+
+.number__quantity {
+  background-color: transparent;
+  border: 1px solid black;
+}
+
+html {
+  background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+}
