@@ -1,0 +1,37 @@
+.contador {
+  /* border: solid 5px pink; */
+  width: 50%;
+  margin: 0 auto;
+  height: 10vh;
+}
+
+.contador button {
+  background-color: transparent;
+
+  align-items: center;
+  margin: 0 auto;
+
+  width: 150px;
+  height: 150px;
+  font-family: "eElingo";
+  font-weight: 900;
+  color: mediumvioletred;
+  font-size: 1.8rem;
+  margin-left: 2px;
+  margin-top: 2px;
+  border-radius: 14px;
+  text-transform: capitalize;
+}
+
+.contador p {
+  width: 20px;
+  height: 20px;
+  font-family: "eElingo";
+  font-weight: 900;
+  color: mediumvioletred;
+  font-size: 1.8rem;
+  margin: o auto;
+
+  text-transform: capitalize;
+  margin-left: 50%;
+}

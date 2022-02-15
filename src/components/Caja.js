@@ -33,27 +33,62 @@ class Caja extends React.Component {
   handleQuantity = (event) => {
     this.setState({ cantidad: this.state.cantidad + 1 });
   };
-  handleOnchange = (event) => {
-    const filter = this.props.articulosCaja.filter(
-      (element) =>
-        (element = "cerveza"
-          ? console.log("Soy cerveza")
-          : console.log("No los soy "))
-    );
 
-    console.log(filter);
+  handleOnchange = (event) => {
+    const Copia = [...this.props.articulosCaja];
+    console.log(Copia, "Soy copia ");
+    const InnerHtml = event.target.innerHTML;
+    console.log(InnerHtml);
+
+    const filtrado = Copia.filter(Encontrarbotones);
+    function Encontrarbotones(articulo) {
+      return articulo === InnerHtml;
+    }
+    console.log(filtrado);
+  };
+
+  // const newArticulos = Copia.filter(Checkarticulo);
+  // function Checkarticulo(art) {
+  //   return art === "";
+  // }
+  // console.log(newArticulos);
+
+  // console.log(newArticulos, "soy articulo separado ");
+  // Copia.forEach((ele, index) => {
+  //   console.log(`${ele} is on the ${index}`);
+  // });
+
+  handleInfo = (event) => {
+    const valor = event.currentTarget;
+    console.log(valor, "soy valor");
+    const data = console.log(data.set.producto);
+  };
+
+  handleOnchangew = (event) => {
+    let productoo = document.getElementById("boton");
+    const arraySinA = productoo.dataset.producto;
+    console.log(arraySinA);
+    var newArreglo = [arraySinA.split(",")];
+    console.log(newArreglo);
+    console.log(newArreglo[0][2]);
+    console.log(event.currentTarget);
+    return newArreglo;
   };
 
   render() {
     return (
       <div>
         <h1 className="h1">Caja</h1>
+        <p></p>
         {this.props.articulosCaja.map((producto) => (
           <div className="clase">
             <div className="product_container">
               <button
-                // onChange={this.handleOnchange}
+                id="boton"
+                data-producto={this.props.articulosCaja}
                 onClick={this.handleOnchange}
+                // onClick={this.handleOnchangew}
+                // onClick={this.handleInfo}
                 className="boton"
               >
                 {producto}
