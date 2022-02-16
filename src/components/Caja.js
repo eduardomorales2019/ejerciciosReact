@@ -8,6 +8,8 @@ import PixelCalculator from "./WindowJsPixelCalculator";
 import NativeEvent from "./NativeEvent";
 import PertinenciaEventosReact from "./PertinenciaEventosReact";
 import ComponentePadre from "./ComponentehijoAPadre";
+import Marcado from "./dangerousInnerHtml";
+import ErrorBondary from "../utils/ErrorBundary";
 
 class Caja extends React.Component {
   static defaultProps = {
@@ -104,6 +106,9 @@ class Caja extends React.Component {
             </div>
           </div>
         ))}
+        <ErrorBondary>
+          <Marcado />
+        </ErrorBondary>
         <ComponentePadre />
         <PertinenciaEventosReact />
         <NativeEvent />
