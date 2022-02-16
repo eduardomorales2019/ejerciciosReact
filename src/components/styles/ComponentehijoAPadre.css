@@ -1,0 +1,17 @@
+.Hijo {
+  border: solid 2px blue;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  background-color: aquamarine;
+  position: relative;
+  top: 50px;
+  font-size: 0.5rem;
+}
+
+.Padre {
+  border: solid 2px red;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}

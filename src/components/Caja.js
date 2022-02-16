@@ -4,6 +4,11 @@ import { v4 as uuidv4 } from "uuid";
 import MutateFunction from "./MutandoEstadoConfuncion/MutateFunction";
 import ObjectVideo from "./MutandoEstadoConfuncion/Objectvideo";
 import SpreadOperatorProps from "./MutandoEstadoConfuncion/SpreadOperatorPropsPassing";
+import PixelCalculator from "./WindowJsPixelCalculator";
+import NativeEvent from "./NativeEvent";
+import PertinenciaEventosReact from "./PertinenciaEventosReact";
+import ComponentePadre from "./ComponentehijoAPadre";
+
 class Caja extends React.Component {
   static defaultProps = {
     articulosCaja: [
@@ -99,7 +104,10 @@ class Caja extends React.Component {
             </div>
           </div>
         ))}
-
+        <ComponentePadre />
+        <PertinenciaEventosReact />
+        <NativeEvent />
+        <PixelCalculator />
         <SpreadOperatorProps />
         <ObjectVideo />
         <MutateFunction />
