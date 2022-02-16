@@ -4,10 +4,14 @@ import React from "react";
 
 // ! por tal razon hay que usar ka propiedad. dangerouslySetInnerHTML con un objeto y  dentro __html: y lo que queremos renderar.
 
+// sanitizar las entradas!!!!
+
 class Marcado extends React.Component {
   state = {
-    marcado: `<h1>soy un html</h1>
+    marcado: `
+	
 	<br/>
+	<h1>soy un html react </h1>
 	<hr/>
 	<a href="#">algun link</a>
 	
@@ -16,7 +20,8 @@ class Marcado extends React.Component {
   render() {
     return (
       <div>
-        <h1>[dangerouslySetInnerHTML= {{ __html: this.state.marcado }}]=</h1>
+        {/* <h1>dangerouslySetInnerHTML={{ __html: this.state.marcado }}=</h1> */}
+        <div dangerouslySetInnerHTML={{ __html: this.state.marcado }}></div>
       </div>
     );
   }
