@@ -3,7 +3,11 @@ import "./MutateFunction.css";
 // SET STATE ES ASYNCRONO YA QUE NO CAMBIA AUTOMATICAMENTE, para valiudar si otros componenetes mutaron el estdo y actualizaron al mismo tiempo!!! se van agrupando..  en cola de motor, asi que podemos hacer  una forma especial de sintaxis para quitarnos ese problema de rendimiento en cado de tener muchos  componentes.
 
 class MutateFunction extends React.Component {
-  state = { cantidad: 0, click: 0 };
+  state = {
+    titulo: "super Trabajo",
+    cantidad: 0,
+    click: 0,
+  };
 
   agregar = () => {
     this.setState({ cantidad: this.state.cantidad + 1 });
@@ -22,13 +26,14 @@ class MutateFunction extends React.Component {
   render() {
     return (
       <div className="contador">
+        <h1>{this.state.title}</h1>
         <button onClick={this.agregar}>
           Contador de clicks
-          <p>{this.state.cantidad}</p>
+          <p>{this.state.cantidad} agregar</p>
         </button>
         <button onClick={this.add}>
           Contador de clicks
-          <p>{this.state.click}</p>
+          <p>{this.state.click} add</p>
         </button>
       </div>
     );

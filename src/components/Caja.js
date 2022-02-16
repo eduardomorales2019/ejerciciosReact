@@ -2,6 +2,8 @@ import React from "react";
 import "./styles/caja.css";
 import { v4 as uuidv4 } from "uuid";
 import MutateFunction from "./MutandoEstadoConfuncion/MutateFunction";
+import ObjectVideo from "./MutandoEstadoConfuncion/Objectvideo";
+import SpreadOperatorProps from "./MutandoEstadoConfuncion/SpreadOperatorPropsPassing";
 class Caja extends React.Component {
   static defaultProps = {
     articulosCaja: [
@@ -98,6 +100,8 @@ class Caja extends React.Component {
           </div>
         ))}
 
+        <SpreadOperatorProps />
+        <ObjectVideo />
         <MutateFunction />
       </div>
     );
