@@ -10,6 +10,8 @@ import PertinenciaEventosReact from "./PertinenciaEventosReact";
 import ComponentePadre from "./ComponentehijoAPadre";
 import Marcado from "./dangerousInnerHtml";
 import ErrorBondary from "../utils/ErrorBundary";
+import ChildrenComponen from "./propsChildren";
+import Destructi from "./destructuring";
 
 class Caja extends React.Component {
   static defaultProps = {
@@ -36,7 +38,7 @@ class Caja extends React.Component {
   };
   constructor(props) {
     super(props);
-    this.state = { cantidadCerveza: 0, cantidad: 0, id: uuidv4 };
+    this.state = { cantidadCerveza: 0, cantidad: 0, id: uuidv4() };
   }
 
   handleQuantity = (event) => {
@@ -88,10 +90,10 @@ class Caja extends React.Component {
     return (
       <div>
         <h1 className="h1">Caja</h1>
-        <p></p>
+
         {this.props.articulosCaja.map((producto) => (
           <div className="clase">
-            <div className="product_container">
+            <div key={producto.id} className="product_container">
               <button
                 id="boton"
                 data-producto={this.props.articulosCaja}
@@ -100,12 +102,14 @@ class Caja extends React.Component {
                 // onClick={this.handleInfo}
                 className="boton"
               >
-                {producto}
+                {<p key={producto.id}> {producto}</p>}
               </button>
               <p className="number__quantity">{this.state.cantidad}</p>
             </div>
           </div>
         ))}
+        <Destructi />
+        <ChildrenComponen />
         <ErrorBondary>
           <Marcado />
         </ErrorBondary>
