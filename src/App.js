@@ -33,8 +33,15 @@ class Modal extends React.Component {
 }
 // ===========
 class App extends React.Component {
-  state = { visible: false };
+  state = { visible: false, count: 0 };
   // ==========
+
+  //! con component did munt se renderiza el componente.
+  // componentDidMount() {
+  //   setInterval(() => {
+  //     this.setState({ count: this.state.count + 1 });
+  //   });
+  //}
   mostrar = () => {
     this.setState({ visible: true });
   };
@@ -50,6 +57,7 @@ class App extends React.Component {
             soy children
             <br></br>
             <button onClick={this.cerrar}> cerrar Portal </button>
+            {this.state.count}
           </Modal>
           {/* <PortalModal>
           hola como estas desde las children de portal 😡
