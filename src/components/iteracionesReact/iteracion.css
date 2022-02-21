@@ -1,0 +1,10 @@
+.container {
+  background-color: blue;
+  color: white;
+  width: 5 0%;
+  margin: 0 auto;
+  border-radius: 20px;
+  text-shadow: 2px 1px 3px yellow;
+  display: flex;
+  flex-direction: column;
+}

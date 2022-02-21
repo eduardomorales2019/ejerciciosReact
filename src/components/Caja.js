@@ -12,6 +12,11 @@ import Marcado from "./dangerousInnerHtml";
 import ErrorBondary from "../utils/ErrorBundary";
 import ChildrenComponen from "./propsChildren";
 import Destructi from "./destructuring";
+import SonProfile from "./PropTypes";
+import Iteracion from "./iteracionesReact/iteraciones";
+
+import Listaa from "./iteracionListasObjetos.js/listaObjetos";
+import ObjectKey from "./iteracionesReact/ObjetcKeys";
 
 class Caja extends React.Component {
   static defaultProps = {
@@ -89,11 +94,21 @@ class Caja extends React.Component {
   render() {
     return (
       <div>
+        <ErrorBondary>
+          <ObjectKey />
+          <Listaa />
+        </ErrorBondary>
+        <ErrorBondary>
+          <Iteracion />
+        </ErrorBondary>
+        <ErrorBondary>
+          <SonProfile nombree="luis Eduardo" anotes={23} />
+        </ErrorBondary>
         <h1 className="h1">Caja</h1>
 
-        {this.props.articulosCaja.map((producto) => (
-          <div className="clase">
-            <div key={producto.id} className="product_container">
+        {this.props.articulosCaja.map((producto, index) => (
+          <div key={index} className="clase">
+            <div className="product_container">
               <button
                 id="boton"
                 data-producto={this.props.articulosCaja}

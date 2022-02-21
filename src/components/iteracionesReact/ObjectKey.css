@@ -1,0 +1,10 @@
+.objectKey {
+  background-color: blueviolet;
+  color: white;
+  text-transform: capitalize;
+  text-align: justify;
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 3px;
+  margin-top: 20px;
+}

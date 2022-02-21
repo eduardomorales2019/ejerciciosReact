@@ -1,0 +1,12 @@
+.container__camisas {
+  background-color: gray;
+  color: white;
+  width: 1000%;
+  border-radius: 20px;
+  text-shadow: 2px 1px 3px green;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+
+  text-align: justify;
+}
