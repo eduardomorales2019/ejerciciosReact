@@ -17,6 +17,7 @@ import Iteracion from "./iteracionesReact/iteraciones";
 
 import Listaa from "./iteracionListasObjetos.js/listaObjetos";
 import ObjectKey from "./iteracionesReact/ObjetcKeys";
+import ComponentJS from "./iteracion de componentes/appComponente";
 
 class Caja extends React.Component {
   static defaultProps = {
@@ -95,6 +96,7 @@ class Caja extends React.Component {
     return (
       <div>
         <ErrorBondary>
+          <ComponentJS />
           <ObjectKey />
           <Listaa />
         </ErrorBondary>
