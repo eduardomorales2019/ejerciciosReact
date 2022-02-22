@@ -1,0 +1,28 @@
+.Container {
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.button_tag {
+  background-color: blueviolet;
+  color: white;
+  width: 30%;
+  height: 100px;
+  align-items: center;
+  text-align: center;
+  align-content: center;
+  align-self: center;
+  border: solid 3px purple;
+  margin-left: 2px;
+  margin: 0 auto;
+  border-radius: 20px;
+  font-size: 1.3rem;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+
+.button_tag:hover {
+  background-color: red;
+}
